@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+// Fonts
+$avenir_black: 	"Avenir Black";
+$roman: 	"Avenir Roman";
+$medium: 	"Avenir Medium";
+$next: 		"Avenir Next Condensed";
+$georgia: 		"Georgia";
+
+h1,h2,h3,h4,h5,h6{@include fonts($roman); text-transform: uppercase; color: $grey;}
+p, ul li, a, small{@include fonts($roman); color: $grey;}
+
+$base-font-size: 62.5%;
+
+html {
+    font-size: $base-font-size;
+}
+
+body{
+	background-color: white;
+}
+
+h1{
+    @include rem2px(26); 
+    @include breakpoint(mobile){
+        @include rem2px(30);
+    }
+    @include breakpoint(tablet){
+        @include rem2px(40);
+    }
+    @include breakpoint(website){
+        @include rem2px(60); 
+    }
+    @include breakpoint(large){
+        @include rem2px(80); 
+    }
+}
+h2{ @include rem2px(26); } 
+h3{@include rem2px(20); }
+h4{ @include rem2px(18); }
+
+p{@include rem2px(16);}
+ul li{@include rem2px(16);}
+
+small{ @include rem2px(12);}
+
+
+
+
+
+
