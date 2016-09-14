@@ -1,5 +1,5 @@
 var CommonsChunckPlugin = require('./node_modules/webpack/lib/optimize/CommonsChunkPlugin.js'),
-    webpack = require('webpack');
+    webpack = require('webpack'),
     path = require("path");
 
 module.exports = {
@@ -9,7 +9,7 @@ module.exports = {
         vendor: ['jquery', 'bootstrap-loader']
     },
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "dist/siteFiles/js/"),
         publicPath: "/siteFiles/js/",
         filename: '[name].bundle.js'
     },
