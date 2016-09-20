@@ -1,4 +1,4 @@
-var CommonsChunckPlugin = require('./node_modules/webpack/lib/optimize/CommonsChunkPlugin.js'),
+var CommonsChunkPlugin = require('./node_modules/webpack/lib/optimize/CommonsChunkPlugin.js'),
     webpack = require('webpack'),
     path = require("path");
 
@@ -67,7 +67,7 @@ module.exports = {
         ],
     },
     plugins: [
-        new CommonsChunckPlugin('vendor', 'vendor.bundle.js'),
+        new CommonsChunkPlugin('vendor', 'vendor.bundle.js'),
         new webpack.ProvidePlugin({ $: "jquery", jQuery: "jquery" })
     ],
 
